@@ -1,0 +1,50 @@
+@use "variables.scss";
+
+.cast {
+  max-width: 1024px;
+  width: 100%;
+  padding: 1rem 3rem;
+  margin: 0 auto;
+
+  h2 {
+    text-align: center;
+    margin: 40px 0;
+
+    &::after {
+      content: "";
+      width: 250px;
+      width: 100%;
+      height: 3px;
+      display: block;
+      background-color: variables.$secondaryColor;
+      margin: auto;
+
+      @media (max-width: 950px) {
+        width: 150px;
+      }
+    }
+  }
+
+  &__person {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    @media (max-width: 950px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 600px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__item {
+      text-align: center;
+      img {
+        max-width: 100%;
+        height: 180px;
+        border-radius: 4px;
+      }
+    }
+  }
+}

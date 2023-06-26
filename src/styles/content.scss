@@ -1,0 +1,50 @@
+@use "variables.scss";
+
+.content {
+  position: absolute;
+  top: 30vh;
+  left: 0;
+  max-width: 50%;
+  width: 100%;
+  padding: 0 1.5rem 0 3em;
+
+  @media (max-width: 600px) {
+    max-width: 100%;
+  }
+
+  h2 {
+    margin-bottom: 16px;
+  }
+
+  p {
+    margin-bottom: 32px;
+  }
+
+  .btn-trailer {
+    display: block;
+    width: 250px;
+    height: 50px;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: variables.$mainTextColor;
+    background-color: variables.$secondaryColor;
+    border-radius: 5px;
+
+    @media (max-width: 950px) {
+      width: 180px;
+      padding: 1.5rem;
+      font-size: 0.75rem;
+    }
+
+    .play {
+      max-width: 40px;
+
+      @media (max-width: 950px) {
+        max-width: 25px;
+      }
+    }
+  }
+}

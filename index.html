@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./dist/css/main.css">
+</head>
+
+<body>
+
+  <div class="banner">
+    <header class="header">
+      <a href="#" class="header__logo">
+        <img src="./dist/images/logo.jpg" alt="">
+      </a>
+    </header>
+
+    <section class="content">
+      <blockquote>
+        <h2 class="title">Eu sou a vingança</h2>
+      </blockquote>
+      <p class="text">
+        Quando o Charada assassina o prefeito de Gotham, ele deixa para trás uma nota endereçada a Batman, a identidade de sua próxima vítima, assim o vigilante de Gotam City precisa juntar as pistas para pegar Charada, que tem uma opinão sobre Gotham, que a cidade merece perecer junto com os criminosos de alto nível.
+      </p>
+      <a href="#" class="btn-trailer" data-modal="open">
+        <img class="play" src="./dist/images/play.png" alt="Botão play">
+        Assista o trailer
+      </a>
+    </section>
+  </div>
+
+  <section class="cast">
+    <h2 class="title">Elenco</h2>
+    <div class="cast__person">
+      <div class="cast__person__item">
+        <img src="./dist/images/cast/robert_pattinson.jpg" alt="Robert Pattinson">
+        <h3 class="title--small">Robert Pattinson</h3>
+        <p class="text">Batman</p>
+      </div>
+      <div class="cast__person__item">
+        <img src="./dist/images/cast/zoe_kravitz.jpg" alt="Zoë Kravitz">
+        <h3 class="title--small">Zoë Kravitz</h3>
+        <p class="text">Selina Kyle</p>
+      </div>
+      <div class="cast__person__item">
+        <img src="./dist/images/cast/paul_dano.jpg" alt="Paul Dano">
+        <h3 class="title--small">Paul Dano</h3>
+        <p class="text">Charada</p>
+      </div>
+      <div class="cast__person__item">
+        <img src="./dist/images/cast/colin_farrell.jpg" alt="Colin Farrell">
+        <h3 class="title--small">Colin Farrell</h3>
+        <p class="text">Pinguim</p>
+      </div>
+      <div class="cast__person__item">
+        <img src="./dist/images/cast/jeffrey_wright.jpg" alt="Jeffrey Wright">
+        <h3 class="title--small">Jeffrey Wright</h3>
+        <p class="text">James Gordon</p>
+      </div>
+      <div class="cast__person__item">
+        <img src="./dist/images/cast/andy_serkis.jpg" alt="Andy Serkis">
+        <h3 class="title--small">Andy Serkis</h3>
+        <p class="text">Alfred</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="trailer" data-modal="trailer">
+    <video src="./src/videos/trailer.mp4" controls="true"></video>
+    <button data-modal="close" class="trailer__close">
+      <img src="./dist/images/close.png" alt="X">
+    </button>
+  </section>
+
+  <script src="./dist/js/main.js"></script>
+</body>
+
+</html>

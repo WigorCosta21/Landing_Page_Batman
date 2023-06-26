@@ -1,0 +1,78 @@
+@use "header.scss";
+@use "content.scss";
+@use "cast.scss";
+@use "trailer.scss";
+@use "variables.scss";
+
+@font-face {
+  font-family: Montserrat;
+  src: url(../../assets/fonts/Montserrat-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(../../assets/fonts/Montserrat-Bold.ttf);
+  font-weight: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: #040406;
+}
+
+@mixin text($fontSize: 1rem) {
+  font-size: $fontSize;
+  line-height: $fontSize + 0.625rem;
+  color: variables.$mainTextColor;
+}
+
+@mixin title($fontSize: 4rem) {
+  font-size: $fontSize;
+  line-height: $fontSize + 0.625rem;
+  color: variables.$titleColor;
+}
+
+.title {
+  @include title;
+
+  @media (max-width: 950px) {
+    @include title(2rem);
+  }
+}
+
+.title--small {
+  @include title(1.5rem);
+
+  @media (max-width: 950px) {
+    @include title(1rem);
+  }
+}
+
+.text {
+  @include text;
+
+  @media (max-width: 950px) {
+    @include title(0.875rem);
+  }
+}
+
+.banner {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(../../dist/images/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (max-width: 600px) {
+    background-size: contain;
+    background-position: initial;
+  }
+}
