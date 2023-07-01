@@ -46,6 +46,10 @@ body {
   @media (max-width: 950px) {
     @include title(2rem);
   }
+
+  @media (max-width: 500px) {
+    @include title(1.5rem);
+  }
 }
 
 .title--small {
@@ -79,5 +83,10 @@ body {
   @media (max-width: 600px) {
     background-size: contain;
     background-position: initial;
+    min-height: 80vh;
+  }
+
+  @media (max-width: 400px) {
+    min-height: 60vh;
   }
 }

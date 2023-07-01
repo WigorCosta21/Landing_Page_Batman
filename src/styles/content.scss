@@ -10,6 +10,11 @@
 
   @media (max-width: 600px) {
     max-width: 100%;
+    top: 40vh;
+  }
+
+  @media (max-width: 380px) {
+    top: 20vh;
   }
 
   h2 {
@@ -37,6 +42,13 @@
       width: 180px;
       padding: 1.5rem;
       font-size: 0.75rem;
+    }
+
+    @media (max-width: 500px) {
+      height: 30px;
+    }
+    @media (max-width: 400px) {
+      padding: 1.25rem;
     }
 
     .play {
