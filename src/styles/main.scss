@@ -1,6 +1,7 @@
 @use "header.scss";
 @use "content.scss";
 @use "cast.scss";
+@use "characters.scss";
 @use "trailer.scss";
 @use "variables.scss";
 
@@ -60,6 +61,10 @@ body {
 
   @media (max-width: 950px) {
     @include title(0.875rem);
+  }
+
+  @media (max-width: 950px) {
+    @include title(0.625rem);
   }
 }
 

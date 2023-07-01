@@ -1,0 +1,89 @@
+@use "variables.scss";
+
+.characters {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+
+  h2 {
+    text-align: center;
+    grid-column: 1/3;
+  }
+
+  &__list {
+    grid-column: 1;
+    height: 400px;
+    overflow-y: scroll;
+
+    @media (max-width: 400px) {
+      height: 500px;
+      overflow-y: hidden;
+    }
+
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: variables.$secondaryColor;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: variables.$mainTextColor;
+    }
+
+    &__item {
+      cursor: pointer;
+      img {
+        max-width: 100%;
+        display: block;
+      }
+    }
+  }
+
+  &__description {
+    grid-column: 2;
+
+    section {
+      display: none;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    section.active.show-right {
+      animation: show-right 0.5s forwards;
+    }
+
+    section.active.show-down {
+      animation: show-down 0.5s forwards;
+    }
+  }
+}
+
+@keyframes show-right {
+  from {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes show-down {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -30px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
