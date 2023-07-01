@@ -48,6 +48,11 @@
   &__description {
     grid-column: 2;
 
+    h2 {
+      color: variables.$secondaryColor;
+      text-align: left;
+    }
+
     section {
       display: none;
     }
